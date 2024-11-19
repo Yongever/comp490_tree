@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+            <meta name="viewport" content="width=device-width, initial scale=1.0">
+            <title>TreesWeb</title>
+            <link rel="icon" href="favicon.jpg">
+            
+            <link rel="stylesheet" href="stylep4.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+           <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" 
+            rel="stylesheet"> -->
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">-->
+        <script src="https://kit.fontawesome.com/7570538cb1.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    </head>
+    <body>
+        <section class="header">
+            
+            <nav> <!--Menu Area-->
+                <a href="index.html"><img src="k1.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="page2.html">CHATBOT</a></li>
+                        <li><a href="page3.html">TREE DATABASE</a></li>
+                        <li><a href="page4.html">ABOUT US</a></li>
+                        <li class="mantreelee"><a href="extrasomething.html">MANAGE TREES</a></li>
+                        <li class="logorb"><a href="somethingpt3.html">LOGIN</a></li>
+                    </ul>
+                    <button class="login-button" id="profile-icon" onclick="window.location.href='somethingpt3.html'">
+                        <i class="fas fa-user"></i>
+                      </button>
+                </div>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+            </nav>
+      
+
+       
+
+            <div class="title"> <!--Big Header section-->
+                <h1> About Us </h1>
+                <h3>Gaurdians of the Grove</h3>
+            </div>
+            
+        </section>
+
+    
+     <section class="sec1">
+        <div class="divpt1">
+            <h3> About Us</h3>
+            <p>Welcome to the Trees.com a website dedicated to promoting environmental sustainability and enhancing the management of urban and campus natural forests. Our tool uses data-driven insights 
+                to assess tree health, predict risks, and provide recommendations for maintaining tree populations. By combining technology and environmental science, we aim to support the conservation of 
+                green spaces and empower communities to take part in environmental protection. 
+            </p>
+
+        </div>
+    </section>
+
+    <section class="abtsec">
+
+       
+
+
+        <div class="row1">
+
+            <div class="purpose">
+                <h3>Our Purpose</h3>
+                <div class="divpt2"> 
+                    <p>Trees are vital to ecosystems and human well-being. They provide essential services like air purification, carbon storage, and habitat for wildlife. However, 
+                        trees in urban and natural environments face challenges such as diseases, pollution, and climate change. Our goal is to offer an accessible platform for monitoring 
+                        tree health, understanding the factors that impact it, and identifying trends that can guide conservation efforts. 
+                    </p>
+                    
+                   
+                    <img id="treepee1" src="redtree2.HEIC" >
+                 <!--    <img id="treepee2" src="treeroad.avif" > -->
+                </div>
+            </div>
+
+            <div class="wwd">
+
+                <h3>What We Do</h3>
+                <div class="divpt2">
+                    <img src="Wideforest.avif" >
+                    
+                    <div>
+
+                        <p>Our tools allow users to: </p>
+                        <ul>
+                            <li> Visualize Tree Data: <br> Explore interactive maps showing the distribution, health of trees, and names.</li>
+                            <li> Analyze Tree Health: <br> Use statistical and machine learning models to predict tree health based on various environmental conditions.</li>
+                            <li>Report Tree Conditions:<br> Enable the community to submit information on local tree conditions or upload photos for analysis.</li>
+                            <li>Support Urban Planning: <br>Provide data insights for urban planners and environmental organizations to make informed decisions on tree management.</li>
+                        </ul>
+                    </div>
+                   
+                </div>
+
+            </div>
+
+            <div class="why">
+
+                <h3>Why it Maters</h3>
+
+                <div class="divpt2">
+
+                    <p>This project helps raise awareness about the state of our environment and encourages action toward sustainability. 
+                        It aids local governments, environmental scientists, and communities by providing a reliable resource for 
+                        understanding and preserving tree populations. 
+                    </p>
+
+                    <img id="treepee3" src="tallpath.avif" >
+                </div>
+            </div>
+           
+        </div>
+
+
+        </section>
+
+        <section class="extrasec">
+
+        </section>
+
+
+        <!-------JavaScript for Toggle Menu--------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+            navLinks.classList.remove('hidden-mobile');
+            navLinks.classList.add('visible-mobile'); 
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+            navLinks.classList.add('hidden-mobile');
+            navLinks.classList.remove('visible-mobile');
+        }
+
+    </script>
+
+
+
+    </body>
+
+    </html>

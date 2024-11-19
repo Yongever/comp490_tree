@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/7570538cb1.js" crossorigin="anonymous"></script>
+  <title>Login to Manage Trees</title>
+  <link rel="stylesheet" href="styleexsp3.css">
+
+</head>
+<body>
+  <section class="header2"> 
+    <nav> <!--Menu Area-->
+        <a href="index.html"><img src="k1.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="page2.html">CHATBOT</a></li>
+                <li><a href="page3.html">TREE DATABASE</a></li>
+                <li><a href="page4.html">ABOUT US</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+  </section>
+
+ <div class="big-div">
+  <h1>Login to Manage Trees</h1>
+  <form id="login-form">
+    <label for="login-email">Email:</label>
+   
+        <input type="email" id="login-email" placeholder="Enter your email" required>
+
+    <label for="login-password">Password:</label>
+    
+        <input type="password" id="login-password" placeholder="Enter your password" required>
+    
+    <button type="submit">Login</button>
+  </form>
+ 
+  <div id="message" class="message"></div>
+
+</div>-->
+
+<script>
+       function showMenu(){
+            navLinks.style.right = "0";
+            navLinks.classList.remove('hidden-mobile');
+            navLinks.classList.add('visible-mobile'); 
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+            navLinks.classList.add('hidden-mobile');
+            navLinks.classList.remove('visible-mobile');
+        }
+</script>
+ 
+  <!-- Use type="module" to allow import statements -->
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+ 
+    const supabaseUrl = 'https://qrpsxkszvsneojwdzufr.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFycHN4a3N6dnNuZW9qd2R6dWZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1Mzg1NjQsImV4cCI6MjA0NTExNDU2NH0.D_oViY50-8-q-NYsRimWiTwLgoxblkkf0XLo5-qfgXc';
+    const supabase = createClient(supabaseUrl, supabaseKey);
+ 
+    const loginForm = document.getElementById('login-form');
+    const messageDiv = document.getElementById('message');
+ 
+    loginForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+ 
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+ 
+      try {
+        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        if (error) throw error;
+ 
+        messageDiv.textContent = 'Login successful!';
+        messageDiv.style.color = 'green';
+        window.location.href = 'extrasomething.html';  // Redirect to manage trees page
+      } catch (error) {
+        messageDiv.textContent = `Login failed: ${error.message}`;
+        messageDiv.style.color = 'red';
+      }
+    });
+  </script>
+ 
+</body>
+</html>
+ 

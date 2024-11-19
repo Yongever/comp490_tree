@@ -1,0 +1,281 @@
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+      background-image: linear-gradient(rgba(4, 26, 21, 0.71),rgba(4, 29, 18, 0.7)),url(treescape2.webp);
+     
+      background-size:255px;
+    }
+
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .header2{
+        position: relative;
+        text-align: center; /* Center the content */
+    }
+
+     /* menu nav area*/
+     nav{
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    nav img{
+        width: 110px;
+        margin-top: -10px;
+        margin-left: -20px;
+        
+    }
+    @media(max-width: 800px){
+        nav img{
+            width: 100px;
+        }
+    }
+    @media(max-width: 700px){
+        nav img{
+            width: 80px;
+        }
+    }
+    
+    .nav-links{
+        flex: 1;
+        text-align: right;
+    }
+    .nav-links ul{
+       margin-top: -35px;
+       margin-right: -10px;
+    }
+    .nav-links ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 7px 10px;
+        position: relative;
+    }
+    .nav-links ul li a{
+        color:#fff;
+        text-decoration: none;
+        font-size: 13px;
+    }
+    .nav-links ul li::after{
+        content: '' ;
+        width: 0%;
+        height: 2px;
+        background:rgb(112, 141, 62);
+        display: block;
+        margin: auto;
+    }
+    .nav-links ul li:hover::after{
+        width: 100%;
+        transition: 0.5s;
+    }
+    
+    nav .fa-solid{
+        display: none;
+    }
+    .logorb{
+        visibility: hidden;
+    }
+    /*media section for smaller screen size for nav*/
+    @media(max-width: 700px){
+        .text-box h1{
+            font-size: 20px;
+        }
+        .nav-links ul li{
+           display: block; 
+        }
+        .nav-links{
+            position:absolute;
+            background: rgb(112, 141, 62);
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 3;
+            transition: 1s;
+            visibility: hidden;
+        }
+        nav .fa-solid{
+            display: block;
+            color:#fff;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            z-index: 2;
+        }
+        .nav-links ul{
+            padding: 30px;
+            margin: -20px 0px 0 -10px;
+        }
+        .logorb{
+            visibility: visible;
+        }
+        .login-button{
+            visibility: hidden;
+        }
+       
+    }
+
+
+@media screen and (max-width: 700px) {
+    .hidden-mobile {
+        position:absolute;
+        background: rgb(112, 141, 62);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 3;
+     transition: 1s;
+      visibility: hidden;
+    }
+    .visible-mobile {
+        position:absolute;
+        background: rgb(112, 141, 62);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 3;
+        transition: 1s;
+      visibility: visible;
+    }
+    .visible-mobile ul{
+        padding: 30px;
+        margin: -20px 0px 0 -10px;
+    }
+    .visible-mobile ul li{
+        display: block; 
+     }
+ }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px auto 20px auto;
+      box-sizing: border-box;
+    }
+    button{
+        padding: 5px;
+        display: block;
+        width: 25%;
+        margin: 0 auto;
+        margin-top: 35px;
+        justify-content: center;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: solid 2px rgb(169, 186, 203);
+        color: #fff;
+        font-size: 15px;
+    }
+
+    input[type="email"]{
+        border-radius: 5px;
+        border:solid 2px rgb(169, 186, 203);
+    }
+    input[type="password"]{
+        border-radius: 5px;
+        border:solid 2px rgb(169, 186, 203);
+    }
+   
+
+    .message {
+      color: red;
+      margin-top: 10px;
+    }
+    h1{
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    #login-form{
+        margin-top: 20px;
+    }
+    label{
+        color: #fff;
+    }
+
+    .big-div{
+        background-color: rgba(180, 186, 193, 0.223);
+        max-width: 50%;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 15px 65px 65px 65px;
+        margin-top: 30px;
+    }
+    @media(max-width:500px){
+        .big-div{
+            max-width: 60%;
+            padding: 15px 25px 65px 25px;
+        }
+      
+    }
+    @media(max-width:400px){
+        .big-div{
+            max-width: 75%;
+            padding: 15px 10px 35px 10px;
+        }
+      
+    }
+
+    .mantreelee{
+        display: none;
+    }
+    
+    .login-button {
+        position: absolute;
+        top: -15px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #0a0a23;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+      @media(max-width:850px){
+        .login-button{
+            top: 20px;
+            right: 20px;
+        }
+      }
+      @media(max-width:500px){
+        .login-button{
+            height: 80px;
+            width: 80px;
+        }
+      }
+      
+      .login-button::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: all 0.6s;
+      }
+      
+      .login-button:hover::before {
+        left: 100%;
+      }
